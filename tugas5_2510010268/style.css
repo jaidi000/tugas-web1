@@ -1,0 +1,175 @@
+/* === 1. GLOBAL & BOX SIZING === */
+* {
+  box-sizing: border-box; /* Wajib: padding tidak menambah lebar elemen */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+/* === 2. NAVBAR (FIXED POSITION) === */
+.navbar {
+  position: fixed; /* Menempel di layar atas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e293b;
+  color: white;
+  padding: 16px 32px;
+  z-index: 1000; /* Pastikan selalu berada di paling depan */
+}
+
+.navbar .brand {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  display: inline-block;
+  float: right; /* Karena belum pakai flex/grid */
+  list-style: none;
+  margin-top: 2px;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* === 3. KONTEN UTAMA (KOMPENSASI PADDING) === */
+.content {
+  /* Kompensasi padding karena navbar fixed memiliki tinggi sekitar 50px */
+  padding-top: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+/* === 4. ELEMEN STICKY === */
+.kategori-sticky {
+  position: sticky; /* Menempel saat di-scroll */
+  top: 60px; /* Jarak penempelan, di bawah navbar fixed */
+  background-color: #0ea5e9;
+  color: white;
+  padding: 12px 20px;
+  margin: 20px;
+  border-radius: 8px;
+  z-index: 900; /* Z-index lebih rendah dari navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* === 5. CONTAINER KARTU === */
+.produk-container {
+  text-align: center; /* Membuat kartu yang inline-block otomatis ke tengah */
+  margin-top: 20px;
+}
+
+/* === 6. KARTU PRODUK (RELATIVE & INLINE-BLOCK) === */
+.card {
+  display: inline-block; /* Berderet menyamping tanpa Flexbox/Grid */
+  position: relative; /* Induk untuk badge absolute */
+  width: 100%;
+  max-width: 220px; /* Batasan lebar konsisten */
+  margin: 15px; /* Margin konsisten */
+  padding: 16px; /* Padding konsisten */
+  background-color: #ffffff;
+  border-radius: 12px; /* Sudut membulat */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Shadow dasar */
+  text-align: left;
+  vertical-align: top;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease; /* Transisi untuk hover */
+}
+
+/* Hover Effect pada Kartu */
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Shadow menebal */
+  transform: translateY(-5px); /* Sedikit efek terangkat */
+}
+
+/* === 7. BADGE KARTU (ABSOLUTE POSITION) === */
+.badge {
+  position: absolute; /* Bebas di dalam induk relative */
+  top: 10px;
+  right: 10px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.badge-diskon {
+  background-color: #ef4444;
+} /* Merah */
+.badge-baru {
+  background-color: #10b981;
+} /* Hijau */
+.badge-laris {
+  background-color: #f59e0b;
+} /* Oranye */
+
+/* === 8. GAMBAR KARTU (OVERFLOW HIDDEN) === */
+.img-container {
+  width: 100%;
+  height: 140px;
+  border-radius: 8px; /* Membuat gambar ikut membulat di dalam kontainer */
+  overflow: hidden; /* Menyembunyikan sisi gambar yang keluar radius */
+  margin-bottom: 12px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menjaga proporsi gambar */
+}
+
+/* === 9. TYPOGRAPHY KARTU === */
+.nama-produk {
+  font-size: 16px;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.harga {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+/* === 10. TOMBOL BELI === */
+.btn-beli {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transisi warna tombol */
+}
+
+.btn-beli:hover {
+  background-color: #2563eb; /* Berubah warna saat di-hover */
+}

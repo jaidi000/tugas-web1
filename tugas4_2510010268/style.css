@@ -1,0 +1,148 @@
+/* === GOOGLE FONTS & IMPOR TIPOGRAFI === */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+
+/* === RESET BASE & BOX MODEL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === SKEMA WARNA & TIPOGRAFI UTAMA === */
+/* 
+  Palet Warna Hex:
+  1. #0f172a (Teks Gelap / Dominan)
+  2. #2563eb (Biru Utama / Aksesibilitas Link)
+  3. #f8fafc (Latar Belakang Terang)
+  4. #e2e8f0 (Garis Batas Neutral)
+  5. #475569 (Teks Sekunder)
+*/
+body {
+  font-family:
+    "Plus Jakarta Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.7;
+  font-size: 16px;
+  padding: 24px 16px;
+}
+
+/* === LAYOUT & CONTAINER (PEMBATASAN LEBAR KONTEN) === */
+header,
+main,
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* === HEADER & NAVIGASI (CHILD & DESCENDANT SELECTOR) === */
+#main-header {
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Selector Child ( > ) */
+nav > ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Selector Descendant (spasi) */
+nav ul li a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  text-transform: uppercase; /* Transformasi Teks */
+  letter-spacing: 1px; /* Jarak Antar Huruf */
+}
+
+/* === KONTEN UTAMA & HIERARKI JUDUL (ELEMEN & CLASS SELECTOR) === */
+/* Selector Child ( > ) */
+main > article {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Selector Elemen */
+h1 {
+  font-size: 28px;
+  line-height: 1.3;
+  color: #0f172a;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* Selector Class */
+.meta-date {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 24px;
+  border-bottom: 1px dashed #e2e8f0;
+  padding-bottom: 12px;
+}
+
+/* === PARAGRAF & PSEUDO-CLASS SELECTOR === */
+/* Selector Descendant */
+article p {
+  font-size: 16px;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Selector Pseudo-class (:first-child) */
+article p:first-of-type {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Selector Pseudo-class (:hover) */
+.external-link:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+/* === BLOCKQUOTE & LIST (ID & PSEUDO-CLASS SELECTOR) === */
+/* Selector ID */
+#quote-box {
+  background-color: #f8fafc;
+  border-left: 4px solid #2563eb;
+  margin: 24px 0;
+  padding: 16px 20px;
+  font-style: italic;
+  color: #334155;
+}
+
+article ul {
+  margin: 20px 0 24px 28px;
+}
+
+/* Selector Pseudo-class (:nth-child) */
+article ul li:nth-child(odd) {
+  background-color: #f8fafc;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+article ul li {
+  margin-bottom: 8px;
+}
+
+/* === FOOTER (ID SELECTOR) === */
+#author-note {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  font-size: 14px;
+  color: #475569;
+}

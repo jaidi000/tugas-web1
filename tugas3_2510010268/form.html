@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran UKM - Tugas 3</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sistem Informasi Akademik & UKM Kampus</h1>
+      <nav>
+        <ul>
+          <li><a href="data.html">Data Mahasiswa</a></li>
+          <li><a href="form.html">Formulir Pendaftaran UKM</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr />
+
+    <main>
+      <section>
+        <h2>Formulir Pendaftaran Anggota UKM Computer Club</h2>
+        <p>
+          Silakan isi formulir di bawah ini dengan data diri yang lengkap dan
+          benar untuk mendaftar sebagai anggota Unit Kegiatan Mahasiswa (UKM).
+        </p>
+
+        <form action="#" method="post">
+          <p>
+            <label for="nama_lengkap">Nama Lengkap:</label><br />
+            <input
+              type="text"
+              id="nama_lengkap"
+              name="nama_lengkap"
+              placeholder="Masukkan nama lengkap Anda"
+              required
+              size="40"
+            />
+          </p>
+
+          <p>
+            <label for="email_aktif">Alamat Email Aktif:</label><br />
+            <input
+              type="email"
+              id="email_aktif"
+              name="email_aktif"
+              placeholder="contoh: jaidi@gmail.com"
+              required
+              size="40"
+            />
+          </p>
+
+          <p>
+            <label for="kata_sandi">Kata Sandi Akun UKM:</label><br />
+            <input
+              type="password"
+              id="kata_sandi"
+              name="kata_sandi"
+              placeholder="Buat kata sandi akun"
+              required
+              size="30"
+            />
+          </p>
+
+          <p>
+            <label for="usia">Usia (Tahun):</label><br />
+            <input
+              type="number"
+              id="usia"
+              name="usia"
+              min="17"
+              max="40"
+              placeholder="18"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="tanggal_lahir">Tanggal Lahir:</label><br />
+            <input
+              type="date"
+              id="tanggal_lahir"
+              name="tanggal_lahir"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="prodi">Program Studi:</label><br />
+            <select id="prodi" name="prodi" required>
+              <option value="">-- Pilih Program Studi --</option>
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Sistem Informasi">Sistem Informasi</option>
+              <option value="Teknik Sipil">Teknik Sipil</option>
+              <option value="Manajemen">Manajemen</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend><strong>Divisi Pilihan UKM</strong></legend>
+            <p>
+              <input
+                type="radio"
+                id="divisi_web"
+                name="divisi"
+                value="Web Development"
+                required
+              />
+              <label for="divisi_web">Web Development</label><br />
+
+              <input
+                type="radio"
+                id="divisi_mobile"
+                name="divisi"
+                value="Mobile Development"
+              />
+              <label for="divisi_mobile">Mobile Development</label><br />
+
+              <input
+                type="radio"
+                id="divisi_network"
+                name="divisi"
+                value="Networking & Server"
+              />
+              <label for="divisi_network">Networking &amp; Server</label><br />
+
+              <input
+                type="radio"
+                id="divisi_design"
+                name="divisi"
+                value="UI/UX Design"
+              />
+              <label for="divisi_design">UI/UX Design</label>
+            </p>
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>
+              <strong
+                >Minat &amp; Keahlian (Boleh pilih lebih dari satu)</strong
+              >
+            </legend>
+            <p>
+              <input
+                type="checkbox"
+                id="minat_html"
+                name="minat[]"
+                value="HTML & CSS"
+              />
+              <label for="minat_html">HTML &amp; CSS</label><br />
+
+              <input
+                type="checkbox"
+                id="minat_js"
+                name="minat[]"
+                value="JavaScript / React"
+              />
+              <label for="minat_js">JavaScript / React</label><br />
+
+              <input
+                type="checkbox"
+                id="minat_php"
+                name="minat[]"
+                value="PHP / Database"
+              />
+              <label for="minat_php">PHP / Database</label><br />
+
+              <input
+                type="checkbox"
+                id="minat_python"
+                name="minat[]"
+                value="Python / Data Science"
+              />
+              <label for="minat_python">Python / Data Science</label>
+            </p>
+          </fieldset>
+
+          <br />
+
+          <p>
+            <label for="alasan">Motivasi &amp; Alasan Bergabung:</label><br />
+            <textarea
+              id="alasan"
+              name="alasan"
+              rows="5"
+              cols="45"
+              placeholder="Tuliskan alasan dan harapan Anda mengikuti UKM ini..."
+              required
+            ></textarea>
+          </p>
+
+          <p>
+            <button type="submit">Kirim Pendaftaran</button>
+            <button type="reset">Reset Form</button>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer>
+      <p>
+        &copy; 2026 Muhammad Jaidi &bull; NPM: 2510010268 &bull; UNISKA
+        Banjarmasin
+      </p>
+    </footer>
+
+    <!-- Muhammad Jaidi, 14 Oktober 2026 -->
+  </body>
+</html>
